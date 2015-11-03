@@ -3,6 +3,9 @@
 ##Step1 : Run order.group2
 ##STEP2: Run PBIB.test.modif (a modified agricolae PBIB function)
 
+library(agricolae)
+library(nlme)
+
 order.group2 <- 
   function (trt, means, N, MSerror, Tprob, std.err, parameter = 1, 
             snk = 0, DFerror = NULL, alpha = NULL, sdtdif = NULL, vartau = NULL, 
@@ -373,5 +376,9 @@ PBIB.test.modif <- function (block, trt, replication, y, k, method = c("REML", "
                  means = means, groups = groups, vartau = vartau)
   invisible(output)
 }
+
+
+output <- PBIB.test.modif(block = dbook$block,trt = dbook$Genotype,replication = dbook$replication,y = dbook$yield,k = 3,method = "REML",test = "lsd",alpha = 0.05,console = TRUE,group = TRUE)
+
 
 
