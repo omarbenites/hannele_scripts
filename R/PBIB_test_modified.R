@@ -4,7 +4,7 @@
 ##STEP2: Run PBIB.test.modif (a modified agricolae PBIB function)
 
 library(agricolae)
-library(nlme)
+library(nlme) 
 
 order.group2 <- 
   function (trt, means, N, MSerror, Tprob, std.err, parameter = 1, 

@@ -1,6 +1,6 @@
 library(agricolae)
 library(nlme)
-
+ 
 Genotype<-paste("geno",1:30,sep="")
 ntr<-length(Genotype)
 r<-2
