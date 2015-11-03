@@ -1,3 +1,5 @@
+##Data Sample for alpha design
+
 library(agricolae)
 library(nlme)
  
